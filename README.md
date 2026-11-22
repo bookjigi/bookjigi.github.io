@@ -64,11 +64,9 @@ lang: ja                       ← 일본어 페이지만 (한국어는 생략)
 
 - **사진 바꾸기**: 새 사진을 `src/static/img/`에 넣고, 페이지 파일에서 `/img/옛이름.webp`를 새 이름으로 바꿉니다.
 - **새 페이지 더하기**: `src/pages/`에 파일을 하나 복사해 이름과 맨 위 정보(path, nav)를 바꾸고, `header.html`과 해당 `subnav-*.html`에 링크를 한 줄씩 더합니다.
-- **검색(네이버·구글)에 공개하기**: `src/partials/head.html`의 `<meta name="robots" content="noindex, nofollow">` 줄을 지우고, `src/static/robots.txt`를 아래처럼 바꿉니다.
-  ```
-  User-agent: *
-  Allow: /
-  ```
+- **검색 공개 상태**: 2026-11-22부터 네이버·구글 검색에 공개했습니다. `src/static/robots.txt`(모두 허용)와 `src/static/sitemap.xml`(페이지 목록)이 있습니다. 페이지를 새로 만들면 sitemap.xml에도 주소를 한 줄 더하세요.
+- **자료 PDF**: `src/static/files/ja/`에 넣고 `src/pages/ja-library.html`에 링크를 답니다.
+- **공유 썸네일**: `src/static/og-bookjigi-20261122.jpg` (1200x630). 바꿀 때는 새 파일 이름으로 넣고 `src/partials/head.html`의 og:image 경로도 바꾸세요(카톡 캐시 때문).
 - **도메인 바꾸기**: `build.ps1` 맨 위 `$Site` 주소를 바꿉니다.
 
 ## 5 · 디자인 약속
