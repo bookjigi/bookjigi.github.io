@@ -275,7 +275,10 @@ nav.main .grp.me a[aria-current="page"]{color:#7A4E17;background:var(--ochre-l)}
 .menu-btn .bars{width:20px;height:14px;position:relative;display:inline-block;margin-top:-3px}
 .menu-btn .bars::before,.menu-btn .bars::after,.menu-btn .bars i{content:"";position:absolute;left:0;right:0;height:2px;background:currentColor;border-radius:2px}
 .menu-btn .bars::before{top:0}.menu-btn .bars i{top:6px}.menu-btn .bars::after{bottom:0}
-@media (max-width:1360px){ .head-call{display:none} }
+/* 전화번호는 맨 위 띠에 있으므로 머리 메뉴의 전화 버튼은 숨김 (메뉴 줄바꿈 방지) */
+.head-call{display:none !important}
+.brand{flex-shrink:0}
+.brand-sub{white-space:nowrap}
 
 /* 하위 페이지 머리 */
 .page-hero{position:relative;color:#fff;padding:clamp(64px,9vw,112px) 0 clamp(40px,6vw,60px);overflow:hidden}
