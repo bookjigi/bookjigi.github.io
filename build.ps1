@@ -1,4 +1,4 @@
-﻿# 하동책방 홈페이지 만들기 스크립트
+# 하동책방 홈페이지 만들기 스크립트
 # 사용법: 이 파일을 마우스 오른쪽 버튼 > "PowerShell에서 실행"
 #        (또는 PowerShell에서  .\build.ps1)
 # 하는 일: src 폴더의 조각(partials)과 페이지(pages)를 합쳐 docs 폴더에 완성된 홈페이지를 만듭니다.
@@ -70,6 +70,7 @@ Get-ChildItem (Join-Path $Src 'pages') -Filter *.html | ForEach-Object {
   $nav  = $meta['nav']
 
   $h = $head.Replace('{{LANG}}', $lang).Replace('{{EXTRA_HEAD}}', $extras[$lang]).Replace('{{TITLE}}', $meta['title']).Replace('{{DESCRIPTION}}', $meta['description']).Replace('{{URL}}', $url).Replace('{{SITE}}', $Site)
+  if ($meta['ogimage']) { $h = $h.Replace("$Site/og-bookjigi-20261122.jpg", "$Site" + $meta['ogimage']) }
   $hd = $header.Replace("data-nav=""$nav""", "data-nav=""$nav"" aria-current=""page""")
 
   $sub = ''

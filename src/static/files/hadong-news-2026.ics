@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//HadongBooks//Literary Gathering 2026//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hadong-news-20261204@bookjigi.kr
+DTSTAMP:20261122T130000Z
+DTSTART:20261204T020000Z
+DTEND:20261204T060000Z
+SUMMARY:박경리 탄생 100주년 · 권용욱의 시로 전하는 하동 늬우스
+LOCATION:악양생활문화센터 1층 세미나실 (경남 하동군 악양면 악양동로 176)
+DESCRIPTION:주관: 하동26토지연구회 · 하동책방\n1부 축하마당 11:00~12:00\n2부 음식마당 12:00~13:00\n3부 잔치마당 13:30~15:00\n문의: 055-883-1011
+URL:https://bookjigi.kr/events/hadong-news-2026/
+END:VEVENT
+END:VCALENDAR
