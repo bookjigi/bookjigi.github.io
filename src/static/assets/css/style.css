@@ -359,3 +359,98 @@ html[lang="ja"] h1,html[lang="ja"] h2,html[lang="ja"] h3,html[lang="ja"] b,html[
 .two-col .ph{aspect-ratio:4/3;border-radius:20px;background:center/cover no-repeat;box-shadow:var(--shadow)}
 .addr-ko{font-size:1.15rem;font-weight:700;background:var(--ochre-l);border-radius:12px;padding:14px 16px 11px;margin:.4rem 0 0}
 @media (max-width:760px){.lib-grid,.two-col{grid-template-columns:1fr}}
+
+/* 책소개 메뉴와 홈 연결 */
+nav.main a{padding-inline:8px;font-size:.9rem}.bigtoggle{min-height:48px}.book-picks-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.book-pick{display:flex;flex-direction:column;min-height:320px;padding:30px;border:1px solid var(--line);border-radius:16px;background:#fff;text-decoration:none;transition:transform .2s,box-shadow .2s}.book-pick:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.book-pick-0{background:#f0f1e8}.book-pick-1{background:#f3ece0}.book-pick-2{background:#eaf1ec}.pick-no{font-size:.76rem;color:var(--teal-d)}.book-pick h3{font-size:1.35rem;margin:24px 0 10px;line-height:1.5}.book-pick small{font-size:.75rem;color:var(--ink-2)}.book-pick p{font-size:1rem;margin:18px 0 26px}.book-pick b{margin-top:auto;font-size:.88rem;color:var(--teal-d)}.book-picks-all{margin-top:28px}.book-shelf-link{padding-bottom:40px}@media(max-width:760px){.book-picks-grid{grid-template-columns:1fr}.book-pick{min-height:260px}}
+
+
+/* ===== 모바일 최적화 (2026-11-22) ===== */
+/* 화면 아래 고정 버튼: Netlify 표시가 없어졌으므로 오른쪽 여백 제거 */
+.dock{padding-right:14px}
+.dock a{flex:1 1 0;font-size:1rem}
+.work-grid.three{grid-template-columns:repeat(3,1fr)}
+.tb-left{display:inline-flex;align-items:center;flex-wrap:wrap;min-width:0}
+.tb-phone{white-space:nowrap}
+.topbar a.lang,.bigtoggle{min-height:44px;white-space:nowrap}
+@media (max-width:1024px){ .work-grid.three{grid-template-columns:1fr 1fr} }
+@media (max-width:760px){
+  /* 맨 위 띠: 한 줄로 (전화 · 日本語 · 큰 글씨) */
+  .topbar{font-size:.86rem}
+  .topbar .wrap{flex-wrap:nowrap;min-height:56px;padding:6px 0;gap:8px}
+  .tb-hours{display:none}
+  .tb-right{gap:6px;flex-shrink:0}
+  .topbar a.lang,.bigtoggle{min-height:44px;padding:8px 12px 5px;font-size:.8rem}
+  /* 머리: 낮게, 메뉴 버튼은 항상 화면 안에 */
+  header.site .wrap{min-height:64px;gap:10px}
+  .brand{min-width:0;flex:1 1 auto;gap:10px}
+  .brand img{width:40px}
+  .brand > span{min-width:0;display:block}
+  .brand-name{font-size:1.15rem}
+  .brand-sub{display:block;font-size:.8rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .menu-btn{flex-shrink:0;min-height:48px}
+  nav.main.open{max-height:calc(100vh - 120px);overflow-y:auto}
+  .subnav{top:64px}
+  [id]{scroll-margin-top:76px}
+  /* 작은 글씨를 14px 이상으로 */
+  .eyebrow{font-size:.8rem}
+  .crumb{font-size:.86rem}
+  .hero .photo-cap,.gallery figcaption,.act figcaption{font-size:.8rem}
+  .shelf .tag,.lib .kind,.prog .head small,.half .k,.half .chips span{font-size:.8rem}
+  .pager small,.facts span,.infocard dt,.brand-sub{font-size:.8rem}
+  .prog .who,.mapbtns a{font-size:.9rem}
+  /* 구역 간격을 줄여 스크롤 줄이기 */
+  section{padding:56px 0}
+  .page-hero{padding:48px 0 32px}
+  .page-hero h1{font-size:1.75rem}
+  .sec-lead{margin-bottom:1.6rem}
+  .half{min-height:340px}
+  .hero .bg{height:240px}
+  .hero .photo-cap{top:208px}
+  .quote blockquote{font-size:1.35rem}
+  .pager{gap:10px}
+  footer{padding-bottom:120px}
+}
+
+/* 일본어는 글자 사이에서 줄바꿈이 되어야 함 (keep-all 해제) */
+html[lang="ja"] body{word-break:normal;line-break:strict;overflow-wrap:anywhere}
+.lib-grid > *,.two-col > *,.quote .wrap > *{min-width:0}
+/* 맨 위 띠 전화번호도 누르기 쉽게 */
+.tb-phone{display:inline-flex;align-items:center;min-height:44px}
+
+/* 보조 글씨는 어느 화면에서나 14px 이상 */
+.brand-sub,.eyebrow,.crumb,.photo-cap,.half .k,.half .chips span,.gallery figcaption,.act figcaption,.shelf .tag,.lib .kind,.prog .head small,.pager small,.facts span,.infocard dt,.pick-no,.book-pick small{font-size:max(14px,.8rem)}
+@media (max-width:760px){ .tb-left{flex-wrap:nowrap} .topbar .open-dot{display:none} }
+
+
+/* ===== 화면 아래 빠른 연락 (전화 · 문자 · 책방 위치) — 3D 버튼 ===== */
+.dock{left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));padding:8px;gap:8px;border:1px solid rgba(255,255,255,.7);border-radius:24px;
+  background:rgba(255,255,255,.82);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);
+  box-shadow:0 18px 40px -14px rgba(20,44,40,.45),0 2px 6px rgba(20,44,40,.08),inset 0 1px 0 rgba(255,255,255,.9);
+  animation:dockIn .7s cubic-bezier(.2,.9,.25,1.25) both .2s}
+.dock .dk{flex:1 1 0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:68px;padding:8px 4px 7px;border-radius:18px;
+  text-decoration:none;color:var(--ink);font-weight:700;font-size:.86rem;letter-spacing:-.01em;-webkit-tap-highlight-color:transparent;
+  transition:transform .18s ease,background .18s ease}
+.dock .dk:hover{background:rgba(47,111,106,.06)}
+.dk-ico{--c1:#3E8A80;--c2:#21514D;--edge:#173B38;position:relative;width:42px;height:42px;border-radius:14px;display:grid;place-items:center;
+  background:linear-gradient(160deg,var(--c1) 0%,var(--c2) 100%);
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.35),inset 0 -3px 6px rgba(0,0,0,.18),0 4px 0 var(--edge),0 10px 16px -6px rgba(0,0,0,.35);
+  transform:translateY(-2px);transition:transform .18s ease,box-shadow .18s ease;animation:dkFloat 3.6s ease-in-out infinite}
+.dk-ico::after{content:"";position:absolute;left:6px;right:6px;top:3px;height:42%;border-radius:10px 10px 14px 14px;background:linear-gradient(180deg,rgba(255,255,255,.38),rgba(255,255,255,0))}
+.dk-ico svg{width:22px;height:22px;fill:#fff;filter:drop-shadow(0 1px 1px rgba(0,0,0,.25));position:relative;z-index:1}
+.dk-sms .dk-ico{--c1:#E0A659;--c2:#B8761F;--edge:#7E4F12;animation-delay:.4s}
+.dk-map .dk-ico{--c1:#E26A86;--c2:#B83E5C;--edge:#7F2840;animation-delay:.8s}
+.dk-call .dk-ico::before{content:"";position:absolute;inset:-4px;border-radius:18px;border:2px solid rgba(47,111,106,.45);animation:dkRing 2.4s ease-out infinite}
+.dock .dk:active{transform:scale(.97)}
+.dock .dk:active .dk-ico{transform:translateY(2px);box-shadow:inset 0 2px 0 rgba(255,255,255,.3),inset 0 -2px 4px rgba(0,0,0,.2),0 0 0 var(--edge),0 4px 8px -4px rgba(0,0,0,.35)}
+.dock .dk:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
+@keyframes dockIn{from{opacity:0;transform:translateY(120%)}to{opacity:1;transform:none}}
+@keyframes dkFloat{0%,100%{transform:translateY(-2px)}50%{transform:translateY(-5px)}}
+@keyframes dkRing{0%{opacity:.9;transform:scale(.92)}70%,100%{opacity:0;transform:scale(1.25)}}
+html.big .dock .dk{font-size:.8rem}
+@media (prefers-reduced-motion:reduce){.dock,.dk-ico,.dk-call .dk-ico::before{animation:none}}
+@media (max-width:760px){ footer{padding-bottom:130px} }
+.dock .dk{min-height:60px;padding:6px 4px 5px;gap:4px}
+.dock{padding:6px}
+.dk-ico{width:40px;height:40px}
+nav.main .gl{font-size:max(13px,.72rem)}
+.hero .photo-cap{font-size:max(14px,.8rem)}

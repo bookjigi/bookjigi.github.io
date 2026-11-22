@@ -8,7 +8,7 @@
 
 | 폴더·파일 | 하는 일 | 언제 고치나 |
 |---|---|---|
-| `src/pages/` | 메뉴별 본문 페이지 9개 | 글이나 사진을 바꿀 때 |
+| `src/pages/` | 메뉴별 본문 페이지 한국어 10개·일본어 5개 | 글이나 사진을 바꿀 때 |
 | `src/partials/header.html` | 맨 위 띠, 로고, 메뉴 | 메뉴 이름·순서를 바꿀 때 |
 | `src/partials/subnav-bookshop.html` | 하동책방 묶음의 탭 | 하동책방 메뉴를 바꿀 때 |
 | `src/partials/subnav-keeper.html` | 책방지기 묶음의 탭 | 책방지기 메뉴를 바꿀 때 |
@@ -29,6 +29,7 @@
 | 홈 | 첫 화면 | `/` | `src/pages/index.html` |
 | 하동책방 | 책방 이야기 | `/bookshop/` | `src/pages/bookshop.html` |
 | 하동책방 | 서가 | `/shelf/` | `src/pages/shelf.html` |
+| 하동책방 | 책소개 | `/books/` | `src/pages/books.html` |
 | 하동책방 | 둘러보기 | `/gallery/` | `src/pages/gallery.html` |
 | 하동책방 | 오시는 길 | `/visit/` | `src/pages/visit.html` |
 | 책방지기 | 소개 | `/about/` | `src/pages/about.html` |
@@ -55,7 +56,7 @@ lang: ja                       ← 일본어 페이지만 (한국어는 생략)
 ## 3 · 고치는 순서
 
 1. `src/` 안의 파일을 고칩니다.
-2. `build.ps1`을 마우스 오른쪽 버튼 → "PowerShell에서 실행"을 누릅니다. "완료: 페이지 14 개를 docs 폴더에 만들었습니다"가 나오면 됩니다.
+2. `build.ps1`을 마우스 오른쪽 버튼 → "PowerShell에서 실행"을 누릅니다. "완료: 페이지 15 개를 docs 폴더에 만들었습니다"가 나오면 됩니다.
 3. GitHub 저장소에 올립니다(GitHub Desktop의 Commit → Push, 또는 웹에서 파일 올리기). 1~2분 뒤 bookjigi.kr에 반영됩니다.
 
 간단한 글자 수정은 GitHub 웹 화면에서 `docs` 안의 파일과 `src` 안의 같은 파일을 둘 다 고쳐도 됩니다.
@@ -74,3 +75,11 @@ lang: ja                       ← 일본어 페이지만 (한국어는 생략)
 - 색: 하동책방은 청록(#2F6F6A), 책방지기는 황토(#C98B3B), 바탕은 한지색(#FAF7F2)
 - 글꼴: 지마켓 산스 (Light 300 / Medium 500 / Bold 700)
 - 어르신 배려: 본문 18px 이상, 버튼 높이 48px 이상, "큰 글씨로 보기" 버튼 유지
+
+## 6 · 책소개 코너
+- 주소: https://bookjigi.kr/books/
+- 본문: src/pages/books.html
+- 전용 스타일: src/static/assets/css/books.css
+- 주제 필터: src/static/assets/js/books.js
+- 첫 세 권: 어른의 행복은 조용하다(태수), 메모 독서법(신정철), 독서모임 꾸리는 법(원하나).
+- 원문 PDF는 공개하지 않습니다. 표지는 자체 제목 디자인입니다. 실물 재고는 별도 확인합니다.
