@@ -10,6 +10,8 @@ $Root  = Split-Path -Parent $MyInvocation.MyCommand.Path
 $Src   = Join-Path $Root 'src'
 $Out   = Join-Path $Root 'docs'
 $Utf8  = New-Object System.Text.UTF8Encoding($false)
+# 스타일·스크립트 캐시 갱신용 번호 (빌드할 때마다 바뀜: 휴대폰이 예전 디자인을 기억하지 않게)
+$Ver   = Get-Date -Format 'yyyyMMddHHmm'
 
 function Read-Text($p)  { [System.IO.File]::ReadAllText($p, $Utf8) }
 function Write-Text($p, $t) {
@@ -77,6 +79,8 @@ Get-ChildItem (Join-Path $Src 'pages') -Filter *.html | ForEach-Object {
   $body = $body.Replace('{{SUBNAV}}', $sub)
 
   $html = $h + $hd + "`n<main id=""top"">`n" + $body.Trim() + "`n</main>`n" + $footer
+
+  $html = [regex]::Replace($html, '(/assets/(?:css|js)/[\w-]+\.(?:css|js))"', ('$1?v=' + $Ver + '"'))
 
   $target = if ([string]::IsNullOrEmpty($path)) { Join-Path $Out 'index.html' } else { Join-Path $Out "$path\index.html" }
   Write-Text $target $html
