@@ -454,3 +454,6 @@ html.big .dock .dk{font-size:.8rem}
 .dk-ico{width:40px;height:40px}
 nav.main .gl{font-size:max(13px,.72rem)}
 .hero .photo-cap{font-size:max(14px,.8rem)}
+
+/* 책방 이야기 연혁: 데스크톱 6개 항목, 기존 모바일 세로 연혁 유지 */
+@media (min-width:1025px){.timeline.timeline-bookshop{grid-template-columns:repeat(6,minmax(0,1fr))}}
