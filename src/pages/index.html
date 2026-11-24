@@ -6,16 +6,27 @@ nav: home
 group: 
 -->
 
-<section class="hero" aria-label="하동책방 소개">
+<section class="hero cm-home-hero" aria-label="하동책방 소개">
     <div class="bg" role="img" aria-label="지리산 능선 아래 잔디 마당과 하동책방 로고 간판, 뒤로 악양생활문화센터 건물이 보입니다."></div>
-    <div class="wrap reveal">
+    <div class="wrap">
       <div class="copy">
+        <div class="cm-home-heading">
         <span class="eyebrow">경남 하동 악양 · 옛 축지초등학교</span>
         <h1>불 꺼진 지리산 자락에<br><em>지혜의 등불</em> 하나</h1>
+        </div>
+      <aside class="cm-recent" aria-labelledby="cm-recent-title">
+        <span class="cm-kicker">책방 사랑방</span>
+        <h2 id="cm-recent-title">최근 다녀간 한마디</h2>
+        <p id="cmRecentStatus" class="cm-feed-status" role="status">사랑방에서 방문객의 인사를 만나보세요.</p>
+        <ol id="cmRecentList" class="cm-feed" hidden aria-label="최근 공개 글 세 편"></ol>
+        <a class="cm-link" href="/community/">책방 사랑방 가기 <span aria-hidden="true">→</span></a>
+      </aside>
+        <div class="cm-home-intro">
         <p class="lead">소설 『토지』의 무대 평사리 들판 곁, 하동책방과 그 책방을 지키는 책방지기 강성호의 이야기입니다.</p>
         <div class="cta">
           <a class="btn btn-white" href="/bookshop/">하동책방 둘러보기</a>
           <a class="btn btn-outline-w" href="/about/">책방지기 소개</a>
+        </div>
         </div>
       </div>
     </div>
@@ -81,6 +92,7 @@ group:
           <li><a href="/shelf/">서가 <span>종이약국·블라인드 북</span></a></li>
           <li><a href="/books/">책소개 <span>쉬고, 적고, 함께 읽기</span></a></li>
           <li><a href="/gallery/">둘러보기 <span>책방 사진</span></a></li>
+          <li><a href="/community/">책방 사랑방 <span>다녀간 한마디·비공개 문의</span></a></li>
           <li><a href="/visit/">오시는 길 <span>주소·지도·전화</span></a></li>
         </ul>
       </div>
@@ -96,3 +108,6 @@ group:
     </div>
   </div>
 </section>
+
+<script defer src="/assets/js/community-config.js"></script>
+<script defer src="/assets/js/community-shell.js"></script>

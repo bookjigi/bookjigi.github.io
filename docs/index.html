@@ -19,9 +19,10 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="/assets/css/style.css?v=202611241051">
+<link rel="stylesheet" href="/assets/css/style.css?v=202611241140">
 </head>
 <body>
+<link rel="stylesheet" href="/assets/css/community.css?v=202611241140">
 <div class="topbar">
   <div class="wrap">
     <span class="tb-left"><span class="open-dot" aria-hidden="true"></span><span class="tb-hours">매일 11:00–18:00 연중무휴 · </span><a class="tb-phone" href="tel:055-883-1011">☎ 055-883-1011</a></span>
@@ -42,6 +43,7 @@
         <a href="/shelf/" data-nav="shelf">서가</a>
         <a href="/books/" data-nav="books">책소개</a>
         <a href="/gallery/" data-nav="gallery">둘러보기</a>
+        <a href="/community/" data-nav="community">책방 사랑방</a>
         <a href="/visit/" data-nav="visit">오시는 길</a>
       </div>
       <div class="grp me"><span class="gl">책방지기</span>
@@ -57,16 +59,27 @@
 </header>
 
 <main id="top">
-<section class="hero" aria-label="하동책방 소개">
+<section class="hero cm-home-hero" aria-label="하동책방 소개">
     <div class="bg" role="img" aria-label="지리산 능선 아래 잔디 마당과 하동책방 로고 간판, 뒤로 악양생활문화센터 건물이 보입니다."></div>
-    <div class="wrap reveal">
+    <div class="wrap">
       <div class="copy">
+        <div class="cm-home-heading">
         <span class="eyebrow">경남 하동 악양 · 옛 축지초등학교</span>
         <h1>불 꺼진 지리산 자락에<br><em>지혜의 등불</em> 하나</h1>
+        </div>
+      <aside class="cm-recent" aria-labelledby="cm-recent-title">
+        <span class="cm-kicker">책방 사랑방</span>
+        <h2 id="cm-recent-title">최근 다녀간 한마디</h2>
+        <p id="cmRecentStatus" class="cm-feed-status" role="status">사랑방에서 방문객의 인사를 만나보세요.</p>
+        <ol id="cmRecentList" class="cm-feed" hidden aria-label="최근 공개 글 세 편"></ol>
+        <a class="cm-link" href="/community/">책방 사랑방 가기 <span aria-hidden="true">→</span></a>
+      </aside>
+        <div class="cm-home-intro">
         <p class="lead">소설 『토지』의 무대 평사리 들판 곁, 하동책방과 그 책방을 지키는 책방지기 강성호의 이야기입니다.</p>
         <div class="cta">
           <a class="btn btn-white" href="/bookshop/">하동책방 둘러보기</a>
           <a class="btn btn-outline-w" href="/about/">책방지기 소개</a>
+        </div>
         </div>
       </div>
     </div>
@@ -79,7 +92,7 @@
       <li><span class="ic" aria-hidden="true">☎️</span><div><b><a href="tel:055-883-1011" style="text-decoration:none">055-883-1011</a></b><span>책 주문·모임 문의</span></div></li>
     </ul>
   </div>
-<link rel="stylesheet" href="/assets/css/event-2026.css?v=202611241051">
+<link rel="stylesheet" href="/assets/css/event-2026.css?v=202611241140">
 <section class="event-teaser" aria-labelledby="event-banner-title"><div class="wrap"><div class="event-banner"><div class="event-stamp">2026<strong>12.04</strong>금요일</div><div><span class="event-tag">박경리 선생 탄생 100주년 기념</span><h2 id="event-banner-title">권용욱의 시로 전하는 하동 늬우스</h2><p>시와 음악, 하동의 맛이 있는 문학 잔치<br>11:00–15:00 · 악양생활문화센터 1층 세미나실</p></div><a class="btn btn-white" href="/events/hadong-news-2026/">행사 자세히 보기 →</a></div></div></section>
 <section id="two">
     <div class="wrap">
@@ -132,6 +145,7 @@
           <li><a href="/shelf/">서가 <span>종이약국·블라인드 북</span></a></li>
           <li><a href="/books/">책소개 <span>쉬고, 적고, 함께 읽기</span></a></li>
           <li><a href="/gallery/">둘러보기 <span>책방 사진</span></a></li>
+          <li><a href="/community/">책방 사랑방 <span>다녀간 한마디·비공개 문의</span></a></li>
           <li><a href="/visit/">오시는 길 <span>주소·지도·전화</span></a></li>
         </ul>
       </div>
@@ -147,6 +161,9 @@
     </div>
   </div>
 </section>
+
+<script defer src="/assets/js/community-config.js?v=202611241140"></script>
+<script defer src="/assets/js/community-shell.js?v=202611241140"></script>
 </main>
 
 <footer>
@@ -172,6 +189,6 @@
   <a class="dk dk-map" href="https://map.naver.com/p/search/%ED%95%98%EB%8F%99%EC%B1%85%EB%B0%A9" target="_blank" rel="noopener" aria-label="네이버 지도에서 책방 위치 보기"><span class="dk-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></svg></span><span class="dk-t">책방 위치</span></a>
 </nav>
 
-<script src="/assets/js/site.js?v=202611241051" defer></script>
+<script src="/assets/js/site.js?v=202611241140" defer></script>
 </body>
 </html>

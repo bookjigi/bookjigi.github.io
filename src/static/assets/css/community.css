@@ -1,0 +1,43 @@
+/* 하동책방 사랑방. 공통 헤더에서 불러와 좁은 메뉴에도 같은 터치 규격을 적용한다. */
+header.site nav.main a {min-height:48px;display:flex;align-items:center}
+@media(min-width:1141px){header.site nav.main .grp{gap:0}header.site nav.main a{padding-inline:6px}}
+@media(min-width:1141px) and (max-width:1250px){header.site nav.main .gl{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}}
+@media(min-width:1141px){html.big header.site nav.main .gl{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}}
+@media(max-width:1140px){header.site nav.main.open{max-height:calc(100vh - 144px);max-height:calc(100dvh - 144px);overflow-y:auto;overscroll-behavior:contain}}
+.cm-nojs-nav a,.cm-crumb a{min-height:48px;display:inline-flex;align-items:center}
+.cm-kicker{display:inline-flex;align-items:center;gap:10px;font-size:max(18px,1rem);font-weight:700;color:#21514d}
+.cm-kicker:before{content:'';width:22px;height:2px;background:#9c6d38}
+.cm-hero{background:#f2ebdf;border-bottom:1px solid #ddd1be;padding:clamp(30px,5vw,72px) 0}
+.cm-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,88px);align-items:center}
+.cm-crumb{display:flex;gap:12px;align-items:center;color:#47534d;font-size:max(18px,1rem)}
+.cm-hero h1{margin:18px 0;line-height:1.32;font-size:clamp(2rem,4.7vw,3.6rem);letter-spacing:-.055em;color:#202e2b}
+.cm-hero h1 em{color:#21514d;font-style:normal}
+.cm-hero p,.cm-guides dd,.cm-app-box p{font-size:max(18px,1.1rem);line-height:1.75;color:#424c45;margin:0}
+.cm-hero .btn{margin-top:24px;font-size:max(18px,1rem)}
+.cm-photo{margin:0;position:relative;overflow:hidden;border-radius:16px;background:#ded6c9;box-shadow:0 12px 30px -22px #2d3a31}
+.cm-photo img{display:block;width:100%;aspect-ratio:1.36;object-fit:cover}
+.cm-photo figcaption{position:absolute;bottom:16px;left:16px;background:#faf7f2;color:#364640;padding:4px 12px 2px;border-radius:8px;font-size:max(18px,1rem)}
+.cm-room{scroll-margin-top:80px;padding:clamp(48px,6vw,88px) 0}
+.cm-room h2{margin:8px 0 24px;line-height:1.45;font-size:clamp(1.6rem,3vw,2.3rem);color:#20352f}
+.cm-guides{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:0 0 32px}
+.cm-guides>div{border-top:2px solid #487c72;border-bottom:1px solid #d9cfc0;padding:20px 0 24px}
+.cm-guides dt{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;color:#20352f;font-size:1.25rem;font-weight:700}
+.cm-guides dt span{border-radius:6px;padding:0 8px;background:#e2ece6;color:#22524a;font-weight:500;font-size:max(18px,1rem)}
+.cm-guides dd{margin-top:8px}
+.cm-app-box{padding:clamp(16px,3vw,32px);border:1px solid #d9d1c4;border-radius:16px;background:#fffdfa}
+.cm-app-box p a{min-height:48px;display:inline-flex;align-items:center;color:#21514d;font-weight:700}
+.cm-app-box iframe{width:100%;display:block;border:0;background:white;border-radius:10px}
+.cm-app-box .cm-link{margin:0 0 16px}
+.cm-link{display:inline-flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;color:#21514d;font-size:max(18px,1rem);font-weight:700;text-decoration:none}
+.cm-link:hover{text-decoration:underline;text-underline-offset:.22em}
+.cm-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.cm-hero-grid>*,.cm-home-hero .wrap>*{min-width:0}
+.cm-home-hero .wrap{display:block}.cm-home-hero .copy{max-width:none;display:grid;grid-template-columns:minmax(260px,.74fr) minmax(0,1.16fr);gap:clamp(32px,8vw,110px);align-items:end;row-gap:0}
+.cm-home-heading{grid-column:2;grid-row:1}.cm-home-intro{grid-column:2;grid-row:2;align-self:start}
+.cm-recent{grid-column:1;grid-row:1 / 3;align-self:end;min-width:0;background:#faf7f2;color:#222;border:1px solid #e3d9c9;border-top:4px solid #2f6f6a;box-shadow:0 12px 32px -24px #132a24;border-radius:14px;padding:clamp(18px,2vw,30px)}
+.cm-recent h2{font-size:clamp(1.3rem,2vw,1.65rem);line-height:1.4;margin:4px 0 10px;color:#20352f}
+.cm-feed-status,.cm-feed{margin:0;font-size:max(18px,1rem);line-height:1.65}
+.cm-recent .cm-link{display:flex;border-top:1px solid #d9d1c4;margin-top:12px;padding-top:6px}
+.cm-feed{list-style:none;padding:0}.cm-feed li{border-top:1px dashed #d9d1c4;padding:8px 0;min-width:0}.cm-feed strong,.cm-feed p{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin:0}.cm-feed strong{color:#315b4f;font-size:max(18px,1rem)}
+.cm-app-box [hidden],.cm-recent [hidden]{display:none!important}
+@media(max-width:760px){.cm-hero-grid,.cm-guides{grid-template-columns:1fr}.cm-hero-grid{gap:24px}.cm-hero h1{margin-top:8px}.cm-photo img{aspect-ratio:1.95}.cm-guides{gap:0}.cm-guides>div+div{border-top:0}.cm-app-box:has(iframe:not([hidden])){padding:8px 0}.cm-app-box .cm-link{margin:0 12px 8px}.cm-home-hero .wrap{padding-top:20px}.cm-home-hero .bg{height:148px}.cm-home-hero .photo-cap{top:116px}.cm-home-hero .copy{display:flex;flex-direction:column;align-items:stretch;gap:16px}.cm-home-heading h1{margin:.4rem 0 0}.cm-recent{align-self:stretch;padding:16px}.cm-feed li{display:grid;grid-template-columns:minmax(50px,31%) 1fr;gap:8px}.cm-home-intro{align-self:stretch}.cm-room{scroll-margin-top:64px}}
