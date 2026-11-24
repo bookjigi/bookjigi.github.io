@@ -83,3 +83,11 @@ lang: ja                       ← 일본어 페이지만 (한국어는 생략)
 - 주제 필터: src/static/assets/js/books.js
 - 첫 세 권: 어른의 행복은 조용하다(태수), 메모 독서법(신정철), 독서모임 꾸리는 법(원하나).
 - 원문 PDF는 공개하지 않습니다. 표지는 자체 제목 디자인입니다. 실물 재고는 별도 확인합니다.
+
+
+## 7 · 책방 이야기 블로그 기록 (2026-11-24)
+- /bookshop/intro/: 책방소개 28개. 자체글·확인된 이미지와 외부 원문 연결을 구분합니다. 개별 경로는 /bookshop/intro/네이버글번호/.
+- /bookshop/journal/: 책방일지 113개. 원문 미리보기와 블로그 링크, 연도·제목 필터, 12개씩 더 보기.
+- 이전 목록·공개용 본문/이미지 참조: content/bookshop-archive.json. 개인정보/외부자료/인물사진은 그대로 공개 복제하지 않습니다.
+- 디자인: src/static/assets/css/stories.css, 기능: src/static/assets/js/stories.js.
+- 새 글 자동 동기화는 설정되어 있지 않습니다. 새 글을 추가할 때 목록/개별 페이지와 sitemap을 함께 갱신하고 build.ps1을 실행합니다.
