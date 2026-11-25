@@ -1,0 +1,13 @@
+{
+  "blog": "river1962",
+  "checkedDayKST": "2026-11-25",
+  "lastFullSuccessDayKST": "2026-11-25",
+  "sources": {
+    "journal": "public-category",
+    "intro": "public-category"
+  },
+  "counts": {
+    "journal": 114,
+    "intro": 28
+  }
+}
