@@ -457,3 +457,6 @@ nav.main .gl{font-size:max(13px,.72rem)}
 
 /* 책방 이야기 연혁: 데스크톱 6개 항목, 기존 모바일 세로 연혁 유지 */
 @media (min-width:1025px){.timeline.timeline-bookshop{grid-template-columns:repeat(6,minmax(0,1fr))}}
+
+/* Daily book picks: keep mobile body type at least 18px. */
+#book-picks .sec-lead,#book-picks .book-pick p{font-size:max(18px,1rem)}
