@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://bookjigi.kr/</loc><lastmod>2026-11-26</lastmod></url>
+  <url><loc>https://bookjigi.kr/</loc><lastmod>2026-11-27</lastmod></url>
   <url><loc>https://bookjigi.kr/bookshop/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://bookjigi.kr/shelf/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://bookjigi.kr/gallery/</loc><lastmod>2026-11-22</lastmod></url>
@@ -14,7 +14,7 @@
   <url><loc>https://bookjigi.kr/ja/library/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://bookjigi.kr/ja/about/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://bookjigi.kr/ja/visit/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://bookjigi.kr/books/</loc><lastmod>2026-11-26</lastmod></url>
+  <url><loc>https://bookjigi.kr/books/</loc><lastmod>2026-11-27</lastmod></url>
   <url><loc>https://bookjigi.kr/events/hadong-news-2026/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://bookjigi.kr/bookshop/intro/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://bookjigi.kr/bookshop/journal/</loc><lastmod>2026-11-24</lastmod></url>
@@ -50,4 +50,5 @@
   <url><loc>https://bookjigi.kr/books/2026-11-25/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://bookjigi.kr/books/2026-11-22/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://bookjigi.kr/books/2026-11-26/</loc><lastmod>2026-11-26</lastmod></url>
+  <url><loc>https://bookjigi.kr/books/2026-11-27/</loc><lastmod>2026-11-27</lastmod></url>
 </urlset>
